@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  section.vh-100
+    .container.py-5.h-100
+      .row.d-flex.justify-content-center.align-items-center.h-100
+        .col.d-flex.justify-content-center.align-items-center
+          #list1.card.w600(style='border-radius: .75rem; background-color: #eff1f2;')
+            .card-body.py-4.px-4.px-md-5
+              p.h1.text-center.mt-3.mb-4.pb-3.text-primary
+                i.fas.fa-check-square.me-1
+                u Todo List Ân
+              .pb-2
+                .card
+                  .card-body
+                    .d-flex.flex-row.align-items-center
+                      input.myInput.form-control.form-control-lg(type='text' placeholder='Thêm gì đó...')
+                      div
+                        button.btn.btn-primary.btn-add(type='button') Thêm
+              hr.my-4
+              .d-flex.justify-content-end.align-items-center.mb-4.pt-2.pb-3
+                p.small.mb-0.me-2.text-muted Lọc
+                select.select(onchange='updateData()' , value = 'all')
+                  option(value='all') Tất cả
+                  option(value='complete') Hoàn thành
+                  option(value='incomplete') Chưa hoàn thành
+                  
+              div.list-todo 
+
+              
+           
+
+
